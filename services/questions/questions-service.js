@@ -8,9 +8,9 @@ const findAllQuestions = () => {
     return questions
 }
 
-findQuestionsForQuiz = (quizId) => {
-    return questions.filter(question => {
-        question.quizId === quizId
+findQuestionsForQuiz = (qzid) => {
+    return questions.filter((question) => {
+        return question.quizId === qzid;
     })
 }
 
