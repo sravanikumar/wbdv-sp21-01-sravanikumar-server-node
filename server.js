@@ -13,13 +13,4 @@ app.use(function (req, res, next) {
 require('./controllers/quizzes-controller')(app)
 require('./controllers/question-controller')(app)
 
-
-// const demos = require('./controllers/demo-controller')
-// demos(app)
-
-// const quizzesController = require('./controllers/quizzes-controller')
-// quizzesController(app)
-
-
-
 app.listen(3000)

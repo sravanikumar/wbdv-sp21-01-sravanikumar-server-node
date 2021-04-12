@@ -2,7 +2,6 @@ const quizzes = require('./quizzes.json')
 
 const createQuiz = () => {}
 
-
 const findAllQuizzes = () => {
     return quizzes
 }
@@ -13,9 +12,7 @@ const findQuizById = (qid) => {
     })
 }
 
-
 const updateQuiz = () => {}
-
 
 const deleteQuiz = () => {}
 
