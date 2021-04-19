@@ -11,9 +11,10 @@ const findAllQuestions = () => {
 }
 
 findQuestionsForQuiz = (qzid) => {
-    return questions.filter((question) => {
-        return question.quizId === qzid;
-    })
+    return questionsModel.find({quizId: qzid})
+    // return questions.filter((question) => {
+    //     return question.quizId === qzid;
+    // })
 }
 
 const findQuestionById = (quid) => {

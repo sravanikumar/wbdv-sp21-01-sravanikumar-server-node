@@ -13,8 +13,12 @@ module.exports = (app) => {
 
     const findQuestionsForQuiz = (req, res) => {
         const quizId = req.params['qzid']
-        const questions = questionService.findQuestionsForQuiz(quizId)
-        res.send(questions)
+        // const questions = questionService.findQuestionsForQuiz(quizId)
+        // res.send(questions)
+        questionService.findQuestionsForQuiz(quizId)
+            .then((questions) => {
+                res.send(questions)
+            })
     }
 
     app.get("/api/questions", findAllQuestions);
