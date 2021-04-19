@@ -18,9 +18,10 @@ findQuestionsForQuiz = (qzid) => {
 }
 
 const findQuestionById = (quid) => {
-    return questions.find((question) => {
-        return question._id === quid;
-    })
+    return questionsModel.findById(quid)
+    // return questions.find((question) => {
+    //     return question._id === quid;
+    // })
 }
 
 const updateQuestion = () => {}
