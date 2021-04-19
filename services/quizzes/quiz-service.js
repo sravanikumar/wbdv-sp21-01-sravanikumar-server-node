@@ -11,6 +11,8 @@ const findAllQuizzes = () => {
 
 const findQuizById = (qid) => {
     return quizzesModel.findById(qid)
+        .populate("questions")
+        .exec()
 
     // return quizzes.find((quiz) => {
     //     return (quiz._id === qid)
