@@ -10,11 +10,11 @@ const findAllQuizzes = () => {
 }
 
 const findQuizById = (qid) => {
+    return quizzesModel.findById(qid)
 
-
-    return quizzes.find((quiz) => {
-        return (quiz._id === qid)
-    })
+    // return quizzes.find((quiz) => {
+    //     return (quiz._id === qid)
+    // })
 }
 
 const updateQuiz = () => {}
