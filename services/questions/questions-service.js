@@ -1,11 +1,13 @@
-let questions = require('./questions.json')
+// let questions = require('./questions.json')
+const questionsModel = require("../../db/questions/questions-model")
 
 const createQuestion = () => {}
 
 const createQuestionForQuiz = () => {}
 
 const findAllQuestions = () => {
-    return questions
+    return questionsModel.find()
+    // return questions
 }
 
 findQuestionsForQuiz = (qzid) => {
