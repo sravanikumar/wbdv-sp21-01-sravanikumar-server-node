@@ -4,7 +4,11 @@ const quizService = require('../services/quizzes/quiz-service')
 module.exports = (app) => {
 
     const findAllQuizzes = (req, res) =>
-        res.send(quizService.findAllQuizzes())
+        quizService.findAllQuizzes()
+            .then((quizzes) => {
+                res.send(quizzes)
+            })
+        // res.send(quizService.findAllQuizzes())
 
     const findQuizById = (req, res) => {
         const quizId = req.params['qid']
