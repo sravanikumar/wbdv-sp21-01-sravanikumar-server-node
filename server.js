@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
-
+const mongoUri = process.env.MONGODB_URI
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/whiteboard',
+mongoose.connect(mongoUri,
     {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use(function (req, res, next) {
