@@ -8,7 +8,6 @@ module.exports = (app) => {
             .then((quizzes) => {
                 res.send(quizzes)
             })
-        // res.send(quizService.findAllQuizzes())
 
     const findQuizById = (req, res) => {
         const quizId = req.params['qid']
