@@ -3,7 +3,7 @@ const app = express()
 const mongoUri = process.env.MONGODB_URI
 const mongoose = require('mongoose');
 mongoose.connect(mongoUri,
-    {useNewUrlParser: true, useUnifiedTopology: true}).catch(error => handleError(error));
+    {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
